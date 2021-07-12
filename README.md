@@ -14,3 +14,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 
 ```
+### 注意事項
+- 若cronjob 失敗, 確認data/cron.d資料夾內檔案owner 是否為 root
+  - 執行`sudo chown -R root data` 將owner 設定為root
