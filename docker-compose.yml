@@ -1,6 +1,6 @@
 version: '3'
 services:
-    init:
+  init:
     image: busybox:latest
     command: "chown -R root:root /data"
     volumes:
@@ -15,6 +15,8 @@ services:
     volumes:
       - ./data/cron.d:/etc/cron.d
       - ./data/data:/data
+    depends_on:
+      - init
     logging:
       driver: "json-file"
       options:
