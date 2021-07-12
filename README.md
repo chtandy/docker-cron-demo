@@ -1,3 +1,5 @@
+### cronjob 範例
+```
 # /etc/crontab: system-wide crontab
 # Unlike any other crontab you don't have to run the `crontab'
 # command to install the new version when you edit this file
@@ -8,5 +10,7 @@ SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 # m h dom mon dow user	command
-*/1 * * * *   root echo "Crontab is working - watchdog 1" > /proc/1/fd/1
-#
+*/1 * * * *   root echo "Crontab is working - watchdog 1" > /proc/1/fd/1 2>&1
+
+
+```
