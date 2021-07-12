@@ -1,0 +1,16 @@
+version: '3'
+services:
+  cronjob:
+    image: ubuntu-cron
+    build: .
+    container_name: cronjob
+    hostname: cronjob
+    restart: always
+    volumes:
+      - ./data/cron.d:/etc/cron.d
+      - ./data/data:/data
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
