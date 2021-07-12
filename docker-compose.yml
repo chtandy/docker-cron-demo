@@ -6,6 +6,7 @@ services:
     volumes:
       - ./data:/data
     restart: 'no'
+
   cronjob:
     image: ubuntu-cron
     build: .
