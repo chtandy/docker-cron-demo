@@ -2,7 +2,7 @@ version: '3'
 services:
     init:
     image: busybox:latest
-    command: chown -R root:root /data
+    command: "chown -R root:root /data"
     volumes:
       - ./data:/data
     restart: 'no'
